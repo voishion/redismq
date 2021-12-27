@@ -17,6 +17,18 @@
     <url>https://gitee.com/voishion/redismq</url>
     <description>该模块是使用基于Redis列表数据类型实现的具有消息队列、可靠消息功能的模块，该项目建立在Spring Boot框架之上，通过Spring提供的RedisTemplate功能访问Redis服务</description>
 
+    <properties>
+        <java.version>1.8</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <spring-boot.version>2.6.2</spring-boot.version>
+        <commons-lang3.version>3.11</commons-lang3.version>
+        <hutool.version>5.6.1</hutool.version>
+        <guava.version>30.1-jre</guava.version>
+        <slf4j.version>1.7.30</slf4j.version>
+        <!-- 打包跳过单元测试 -->
+        <skipTests>true</skipTests>
+    </properties>
+
     <developers>
         <developer>
             <id>lilu</id>
@@ -42,17 +54,16 @@
         <url>git@gitee.com:voishion/redismq.git</url>
     </scm>
 
-    <properties>
-        <java.version>1.8</java.version>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <spring-boot.version>2.6.2</spring-boot.version>
-        <commons-lang3.version>3.11</commons-lang3.version>
-        <hutool.version>5.6.1</hutool.version>
-        <guava.version>30.1-jre</guava.version>
-        <slf4j.version>1.7.30</slf4j.version>
-        <!-- 打包跳过单元测试 -->
-        <skipTests>true</skipTests>
-    </properties>
+    <distributionManagement>
+        <snapshotRepository>
+            <id>oss</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+        </snapshotRepository>
+        <repository>
+            <id>oss</id>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+    </distributionManagement>
 
     <dependencyManagement>
         <dependencies>
