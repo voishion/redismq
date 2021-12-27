@@ -7,14 +7,16 @@
     <groupId>com.github.voishion</groupId>
     <artifactId>redismq</artifactId>
     <version>1.0.0-SNAPSHOT</version>
+
     <modules>
         <module>redismq-spring-boot-starter</module>
     </modules>
+
     <packaging>pom</packaging>
     <name>redismq</name>
     <url>https://gitee.com/voishion/redismq</url>
-    <description>该模块是使用基于Redis列表数据类型实现的具有消息队列、可靠消息功能的模块，该项目建立在Spring Boot框架之上，通过Spring提供的RedisTemplate功能访问Redis服务。
-    </description>
+    <description>该模块是使用基于Redis列表数据类型实现的具有消息队列、可靠消息功能的模块，该项目建立在Spring Boot框架之上，通过Spring提供的RedisTemplate功能访问Redis服务</description>
+
     <developers>
         <developer>
             <id>lilu</id>
@@ -23,44 +25,45 @@
             <roles>
                 <role>Java Development Engineer</role>
             </roles>
-            <timezone>2021-12-26 14:56:27</timezone>
+            <timezone>+8</timezone>
         </developer>
     </developers>
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <knife4j.version>1.0.0-SNAPSHOT</knife4j.version>
-        <java.version>1.8</java.version>
-        <spring-boot.version>2.1.4.RELEASE</spring-boot.version>
-        <commons-lang3.version>3.11</commons-lang3.version>
-        <hutool.version>5.6.1</hutool.version>
-        <slf4j.version>1.7.30</slf4j.version>
-        <!-- 打包跳过单元测试 -->
-        <skipTests>true</skipTests>
-    </properties>
+
     <licenses>
         <license>
             <name>The Apache Software License, Version 2.0</name>
             <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
         </license>
     </licenses>
+
     <scm>
         <connection>scm:git@gitee.com:voishion/redismq.git</connection>
         <developerConnection>scm:git@gitee.com:voishion/redismq.git</developerConnection>
         <url>git@gitee.com:voishion/redismq.git</url>
     </scm>
-    <distributionManagement>
-        <snapshotRepository>
-            <id>oss</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
-        </snapshotRepository>
-        <repository>
-            <id>oss</id>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-        </repository>
-    </distributionManagement>
+
+    <properties>
+        <java.version>1.8</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <knife4j.version>1.0.0-SNAPSHOT</knife4j.version>
+        <spring-boot.version>2.6.2</spring-boot.version>
+        <commons-lang3.version>3.11</commons-lang3.version>
+        <hutool.version>5.6.1</hutool.version>
+        <guava.version>30.1-jre</guava.version>
+        <slf4j.version>1.7.30</slf4j.version>
+        <!-- 打包跳过单元测试 -->
+        <skipTests>true</skipTests>
+    </properties>
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-lang3</artifactId>
@@ -72,11 +75,9 @@
                 <version>${hutool.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-dependencies</artifactId>
-                <version>${spring-boot.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${guava.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.slf4j</groupId>
@@ -111,7 +112,6 @@
                     </execution>
                 </executions>
             </plugin>
-
             <!-- 私服上传源码 -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -125,7 +125,6 @@
                     </execution>
                 </executions>
             </plugin>
-
             <!--maven 指定jdk版本 -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
