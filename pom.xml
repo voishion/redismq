@@ -10,6 +10,7 @@
 
     <modules>
         <module>redismq-spring-boot-starter</module>
+        <module>redismq-spring-boot-starter-example</module>
     </modules>
 
     <packaging>pom</packaging>
