@@ -1,6 +1,6 @@
 # RedisMQ
 
-> [参考对象](https://gitee.com/jo8tony/redis-mq) ，在其基础上加入了可靠消息、销毁不消费等逻辑
+> [参考对象1](https://gitee.com/jo8tony/redis-mq) ，在其基础上加入了可靠消息、销毁不消费等逻辑
 
 - ## Redis消息队列
 
