@@ -1,8 +1,8 @@
-package com.github.voishion.redismq;
+package io.github.voishion.redismq;
 
-import com.github.voishion.redismq.core.RedisMQListenerScanner;
-import com.github.voishion.redismq.core.RedisMQRegister;
-import com.github.voishion.redismq.core.RedisMQSender;
+import io.github.voishion.redismq.core.RedisMQListenerScanner;
+import io.github.voishion.redismq.core.RedisMQRegister;
+import io.github.voishion.redismq.core.RedisMQSender;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.autoconfigure.AutoConfigureBefore;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;

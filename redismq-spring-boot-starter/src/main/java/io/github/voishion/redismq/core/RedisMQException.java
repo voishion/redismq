@@ -1,4 +1,4 @@
-package com.github.voishion.redismq.core;
+package io.github.voishion.redismq.core;
 
 /**
  * Redis消息队列异常

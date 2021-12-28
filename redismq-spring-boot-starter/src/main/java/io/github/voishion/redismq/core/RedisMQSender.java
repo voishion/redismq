@@ -1,7 +1,7 @@
-package com.github.voishion.redismq.core;
+package io.github.voishion.redismq.core;
 
 import cn.hutool.core.util.StrUtil;
-import com.github.voishion.redismq.RedisMQMessage;
+import io.github.voishion.redismq.RedisMQMessage;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.redis.core.RedisTemplate;
 

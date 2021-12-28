@@ -1,8 +1,8 @@
-package com.github.voishion.redismq.core;
+package io.github.voishion.redismq.core;
 
 import cn.hutool.core.util.StrUtil;
-import com.github.voishion.redismq.RedisMQListener;
-import com.github.voishion.redismq.RedisMQListenerTarget;
+import io.github.voishion.redismq.RedisMQListener;
+import io.github.voishion.redismq.RedisMQListenerTarget;
 import org.apache.commons.lang3.ArrayUtils;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;

@@ -1,9 +1,9 @@
-package com.github.voishion.redismq.core;
+package io.github.voishion.redismq.core;
 
 import cn.hutool.core.collection.CollUtil;
 import cn.hutool.core.util.StrUtil;
-import com.github.voishion.redismq.RedisMQListenerTarget;
-import com.github.voishion.redismq.RedisMQMessage;
+import io.github.voishion.redismq.RedisMQListenerTarget;
+import io.github.voishion.redismq.RedisMQMessage;
 import com.google.common.base.Throwables;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeansException;

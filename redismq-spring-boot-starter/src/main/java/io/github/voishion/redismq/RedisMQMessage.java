@@ -1,4 +1,4 @@
-package com.github.voishion.redismq;
+package io.github.voishion.redismq;
 
 import lombok.Data;
 import lombok.experimental.Accessors;

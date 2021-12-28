@@ -1,7 +1,7 @@
-package com.github.voishion.redismq;
+package io.github.voishion.redismq;
 
 import cn.hutool.core.util.StrUtil;
-import com.github.voishion.redismq.core.RedisMQException;
+import io.github.voishion.redismq.core.RedisMQException;
 import lombok.Data;
 import lombok.experimental.Accessors;
 import org.springframework.context.ApplicationContext;
